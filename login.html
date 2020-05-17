@@ -1,0 +1,82 @@
+<html>
+
+<style>
+    .body {
+        background-image: url(..//image/1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+</style>
+
+<head>
+    <title>G191210373</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="js/caroufredsel.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body oncontextmenu="return false", background="image/1.jpg">
+    <header>
+        <div class="container">
+            <div class="row">
+                <a href="" class="logo"><img src="image/aysun.png"></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="ozgecmis.html">Özgeçmiş</a></li>
+                        <li><a href="sehrim.html">Şehrim</a></li>
+                        <li><a href="mirasimiz.html">Mirasımız</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <li class="login-back">
+        <div class="login-box">
+           <img src="image/avatar.jpg" class="avatar">
+            <h1>Giriş Yapınız</h1>
+            <form>
+                <p>Kullanıcı Adı</p>
+                <input type="text" name="username" placeholder="Kullanıcı adınızı girin">
+                <p>Şifre</p>
+                <input type="password" name="password" placeholder="Şifrenizi girin">
+                <input type="button" onclick="check(this.form)" value="Giriş">
+                <a href="#">Şifremi Unuttum</a>
+            </form>
+            
+            <script language="javascript">
+                function check(form)
+                {
+                    if(form.username.value == "aysun" && form.password.value == "123")
+                        {
+                            window.open('file:///C:/Users/aysun/OneDrive/Masa%C3%BCst%C3%BC/Web%20Teknolojileri-g191210373/index.html')
+                            alert("Hosgeldiniz Aysun")  
+                        }
+                    else
+                    {
+                        alert("The username and password you entered dont match")    
+                    }
+                }
+            </script>
+            
+        </div>
+    </li>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

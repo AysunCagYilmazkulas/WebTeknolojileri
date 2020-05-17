@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>G191210373</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="js/caroufredsel.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <a href="" class="logo"><img src="image/aysun.png"></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="ozgecmis.html">Özgeçmiş</a></li>
+                        <li><a href="sehrim.html">Şehrim</a></li>
+                        <li><a href="mirasimiz.html">Mirasımız</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="intro-area white" id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>ŞEHRİM ARTVİN</h2>
+                    <div class="sub-heading">
+                        <p>
+                            ATATÜRK ÇOK SEVDİĞİ ARTVİN’E HİÇ GELEMEDİ. <br> ANCAK ONUN TÜRKİYE’NİN EN BÜYÜK DEVASA HEYKELİ ARTVİN’DE ADINI TAŞIYAN ATATEPE’DE YÜKSELİYOR.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sehrim-slider">
+        <ul class="slider-carousel" id="slider-carousel">
+            <li class="img-sehrim1">
+                <div class="s-intro-block">
+                    <h5>İLİMİZ</h5>
+                    <p>Artvin, Türkiye'nin Karadeniz Bölgesi'nin Doğu Karadeniz Bölümü'nde yer alan, Karadeniz'e kıyısı bulunan bir ildir. İl, Türkiye'nin Gürcistan'la olan sınırında yer alan kuzeydoğu köşesidir. Doğusunda Ardahan ili, güneyinde Erzurum ili ve batısında Rize ili vardır.  İlin bir önceki adı Çoruh olup, TBMM'nde kabul edilen 17 Şubat 1956 tarih ve 6668 sayılı kanunla Artvin olmuştur.</p>
+                </div>
+            </li>
+            <li class="img-sehrim2">
+                <div class="s-intro-block">
+                    <h5>NÜFUSUMUZ</h5>
+                    <p>Artvin’in 8 ilçesi ile birlikte nüfusu 176000'dir. İlimizde Artvin Çoruh Üniversitesi ile birlikte nüfus artarken köylerde yaşanan göç ile birlikte ilimizin nüfusunda azalma olmaktadır. Buna göre Artvin’in en kalabalık ilçesi 35 bin 406 ile Hopa ilçesi oldu. Bu ilçeyi Artvin Merkez 34 Bin 626 ile takip ederken en kalabalık 3.ilçemiz ise 22 Bin 36 ile Borçka ilçesi oldu.</p>
+                </div>
+            </li>
+            <li class="img-sehrim3">
+                <div class="s-intro-block">
+                    <h5>KÜLTÜRÜMÜZ</h5>
+                    <p>Artvin, geçmişten günümüze çok farklı halk ve kültürün bir arada sorunsuz yaşamasını sağlarken aynı zamanda renkli, özgün bir kültürel yapıyı da ortaya koymuş. Daha çok Kafkas ve Karadeniz kültürünün hakim olduğu yörede, mutfak geleneğinden el sanatlarına, halk oyunlarından hayvancılığa uzanan zengin bir kültür barınıyor. Karadeniz kulturunu yasayabilmek icin mutlaka gezip gorulmeli...</p>
+                </div>
+            </li>
+            <li class="img-sehrim4">
+                <div class="s-intro-block">
+                    <h5>GEZİLECEK YERLER</h5>
+                    <p>Heybetli dağları, fazlasıyla yeşil ormanları, birbirinden güzel yaylaları, krater gölleri ve 5000 yıllık tarihi mirası ile yeryüzünün cennetidir Artvin.Harika doğası ve güzellikleri ile gezilecek oldukça fazla yer bulunuyor ve Artvin’de gezilecek yerler listesi oldukça geniş.<br>Macahel Yaylasi, Mencuna Selalesi, Ciftekopru, Karagol Milli Parki, Dolishane Kilisesi bunlardan bazilaridir.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <script src="js/main.js">
+    jQuery(document).ready(function() {
+    
+    "use strict";
+    $('#slider-carousel').carouFredSel({
+        responsive:true,
+        width:'100%',
+        circular:true,
+        scroll:{
+            items:1,
+            duration:500,
+            pauseOnHover:true
+        },
+        auto:true,
+        items:
+        {
+            visible:{
+                min:1,
+                max:1
+            },
+            height:"variable"
+        },
+        pagination:{
+            container:".sliderpager",
+            pageAnchorBuilder:false
+        }
+    });
+    $(window).scroll(function(){
+       var top = $(window).scrollTop();
+        if(top>=60){
+            $("header").addClass('secondary');
+        }
+        else 
+            if( $("header").hasClass('secondary')){
+             $("header").removeClass('secondary');
+        }
+    });
+    
+});</script>
+</body>
+
+</html>
